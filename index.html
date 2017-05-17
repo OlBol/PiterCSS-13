@@ -144,14 +144,22 @@
 		<p>В марте 1999 года Microsoft выпустила браузер Internet Explorer 5, который первым стал поддерживать значки для сайта.</p>
 	</section>
 
-	<section class="slide">
-		<h2 class="shout shrink">Windows</h2>
-	</section>
+	<!--<section class="slide">-->
+		<!--<h2 class="shout shrink">Windows</h2>-->
+	<!--</section>-->
 
 	<section class="slide">
+		<h2>Атрибут sizes в HTML5</h2>
 		<pre>
 			<code>&lt;link rel="<span class="value">icon</span>" sizes="<span class="value"><ширина>X<высота></span>"></code>
 			<code>&lt;link rel="<span class="value">icon</span>" sizes="<span class="value"><ширина1>X<высота1> <ширина2>X<высота2> | any</span>"></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Firefox</h2>
+		<pre>
+			<code>&lt;link rel="<span class="value">mask-icon</span>" sizes="<span class="value">any</span>" href="<span class="value">favicon.svg</span>" color="<span class="value">#5bbad5</span>"></code>
 		</pre>
 	</section>
 
@@ -160,9 +168,10 @@
 	</section>
 
 	<section class="slide">
+		<h2>С помощью метаданных в &lt;head></h2>
 		<pre>
 			<!--<code>&lt;head&gt;</code>-->
-			<code>&lt;meta name="<span class="value">msapplication-TileImage</span>" content="<span class="value">images\tileimage.jpg</span>"></code>
+			<code>&lt;meta name="<span class="value">msapplication-TileImage</span>" content="<span class="value">tileimage.jpg</span>"></code>
 			<style>
 				pre {
 					font-size: 20px;
@@ -177,12 +186,14 @@
 	</section>
 
 	<section class="slide">
+		<h2>С помощью метаданных в &lt;head></h2>
+
 		<pre>
 			<!--<code>&lt;head&gt;</code>-->
-			<code>&lt;meta name="<span class="value">msapplication-square70x70logo</span>" content="<span class="value">images/smalltile.png</span>"></code>
-			<code>&lt;meta name="<span class="value">msapplication-square150x150logo</span>" content="<span class="value">images/mediumtile.png</span>"></code>
-			<code>&lt;meta name="<span class="value">msapplication-wide310x150logo</span>" content="<span class="value">images/widetile.png</span>"></code>
-			<code>&lt;meta name="<span class="value">msapplication-square310x310logo</span>" content="<span class="value">images/largetile.png</span>"></code>
+			<code>&lt;meta name="<span class="value">msapplication-square70x70logo</span>" content="<span class="value">smalltile.png</span>"></code>
+			<code>&lt;meta name="<span class="value">msapplication-square150x150logo</span>" content="<span class="value">mediumtile.png</span>"></code>
+			<code>&lt;meta name="<span class="value">msapplication-wide310x150logo</span>" content="<span class="value">widetile.png</span>"></code>
+			<code>&lt;meta name="<span class="value">msapplication-square310x310logo</span>" content="<span class="value">largetile.png</span>"></code>
 			<code class="next">&lt;meta name="<span class="value">msapplication-TileColor</span>" content="<span class="value">#009900</span>"></code>
 			<code class="next">&lt;meta name="<span class="value">application-name</span>" content="<span class="value">Rick and Morty</span>"></code>
 			<code class="next">&lt;meta name="<span class="value">msapplication-tooltip</span>" content="<span class="value">Rick and Morty</span>"></code>
@@ -198,8 +209,9 @@
 	</section>
 
 	<section class="slide">
+		<h2>browserconfig.xml</h2>
 		<pre>
-			<code>&lt;?xml version="<span class="value">1.0</span>" encoding="<span class="value">utf-8</span>"?></code>
+			<!--<code>&lt;?xml version="<span class="value">1.0</span>" encoding="<span class="value">utf-8</span>"?></code>-->
 			<code>&lt;browserconfig></code>
     		<code>	&lt;msapplication></code>
         	<code>		&lt;tile></code>
@@ -207,14 +219,14 @@
             <code>			&lt;square150x150logo src="<span class="value">/img/favicons/mstile-150x150.png</span>"/></code>
             <code>			&lt;square310x310logo src="<span class="value">/img/favicons/mstile-310x310.png</span>"/></code>
             <code>			&lt;wide310x150logo src="<span class="value">/img/favicons/mstile-310x150.png</span>"/></code>
-            <code>			&lt;TileColor>#000000&lt;/TileColor></code>
+            <code>			&lt;TileColor><span class="value">#000000</span>&lt;/TileColor></code>
 			<code>		&lt;/tile></code>
 	  		<code class="small_text">	<span>&lt;notification></span></code>
-      		<code class="small_text">		<span>&lt;polling-uri  src="<span class="value">notifications/contoso1.xml</span>"/></span></code>
-      		<code class="small_text">		<span>&lt;polling-uri2 src="<span class="value">notifications/contoso2.xml</span>"/></span></code>
-      		<code class="small_text">		<span>&lt;polling-uri3 src="<span class="value">notifications/contoso3.xml</span>"/></span></code>
-      		<code class="small_text">		<span>&lt;frequency>30</frequency></span></code>
-      		<code class="small_text">		<span>&lt;cycle>1</cycle></span></code>
+      		<code class="small_text">		<span>&lt;polling-uri  src="<span class="value">notifications/template1.xml</span>"/></span></code>
+      		<code class="small_text">		<span>&lt;polling-uri2 src="<span class="value">notifications/template2.xml</span>"/></span></code>
+      		<!--<code class="small_text">		<span>&lt;polling-uri3 src="<span class="value">notifications/contoso3.xml</span>"/></span></code>-->
+      		<code class="small_text">		<span>&lt;frequency><span class="value">30</span>&lt;/frequency></span></code>
+      		<code class="small_text">		<span>&lt;cycle><span class="value">1</span>&lt;/cycle></span></code>
         	<code class="small_text">	<span>&lt;/notification></span></code>
     		<code>	&lt;/msapplication></code>
 			<code>&lt;/browserconfig></code>
@@ -233,8 +245,10 @@
 	</section>
 
 	<section class="slide">
+		<h2>browserconfig.xml</h2>
+
 		<pre>
-			<code class="small_text"><span>&lt;?xml version="<span class="value">1.0</span>" encoding="<span class="value">utf-8</span>"?></code>
+			<!--<code class="small_text"><span>&lt;?xml version="<span class="value">1.0</span>" encoding="<span class="value">utf-8</span>"?></code>-->
 			<code class="small_text"><span>&lt;browserconfig></code>
     		<code class="small_text">	<span>&lt;msapplication></code>
         	<code class="small_text">		<span>&lt;tile></code>
@@ -242,14 +256,14 @@
             <code class="small_text">			<span>&lt;square150x150logo src="<span class="value">/img/favicons/mstile-150x150.png</span>"/></span></code>
             <code class="small_text">			<span>&lt;square310x310logo src="<span class="value">/img/favicons/mstile-310x310.png</span>"/></span></code>
             <code class="small_text">			<span>&lt;wide310x150logo src="<span class="value">/img/favicons/mstile-310x150.png</span>"/></span></code>
-            <code class="small_text">			<span>&lt;TileColor>#000000&lt;/TileColor></span></code>
+            <code class="small_text">			<span>&lt;TileColor><span class="value">#000000</span>&lt;/TileColor></span></code>
 			<code class="small_text">		<span>&lt;/tile></span></code>
 	  		<code>	&lt;notification></code>
-      		<code>		&lt;polling-uri  src="<span class="value">notifications/contoso1.xml</span>"/></code>
-      		<code>		&lt;polling-uri2 src="<span class="value">notifications/contoso2.xml</span>"/></code>
-      		<code>		&lt;polling-uri3 src="<span class="value">notifications/contoso3.xml</span>"/></code>
-      		<code>		&lt;frequency>30</frequency></code>
-      		<code>		&lt;cycle>1</cycle></code>
+      		<code>		&lt;polling-uri  src="<span class="value">notifications/template1.xml</span>"/></code>
+      		<code>		&lt;polling-uri2 src="<span class="value">notifications/template2.xml</span>"/></code>
+      		<!--<code>		&lt;polling-uri3 src="<span class="value">notifications/contoso3.xml</span>"/></code>-->
+      		<code>		&lt;frequency><span class="value">30</span>&lt;/frequency></code>
+      		<code>		&lt;cycle><span class="value">1</span>&lt;/cycle></code>
         	<code>	&lt;/notification></code>
     		<code class="small_text">	<span>&lt;/msapplication></span></code>
 			<code class="small_text"><span>&lt;/browserconfig></span></code>
@@ -310,13 +324,43 @@
 				<td>558 x 558</td>
 			</tr>
 		</table>
+
+		<style>
+			table {
+				font-size: 24px;
+				line-height: 1;
+			}
+
+			td, th{
+				padding: 15px 10px;
+			}
+		</style>
 	</section>
 
-	<!--<section class="slide grid">-->
-		<!--<h2>All nicely aligned to grid</h2>-->
-	<!--</section>-->
+	<section class="slide">
+		<h2>&lt;cycle></h2>
+		<span>Управляет способом повторения сообщений.</span>
+		<ul class="cycle">
+			<li>0: (по умолчанию при одном уведомлении) не повторять.</li>
+			<li>1: (по умолчанию при нескольких уведомлениях) повторять уведомления для плиток всех размеров.</li>
+			<li>2: повторять уведомления только для средних плиток.</li>
+			<li>3: повторять уведомления только для широких плиток.</li>
+			<li>4: повторять уведомления только для больших плиток.</li>
+			<li>5: повторять уведомления только для средних или широких плиток.</li>
+			<li>6: повторять уведомления только для средних или больших плиток.</li>
+			<li>7: повторять уведомления только для широких или больших плиток.</li>
+		</ul>
+
+		<style>
+			.cycle {
+				font-size: 24px;
+				line-height: 1.5;
+			}
+		</style>
+	</section>
 
 	<section class="slide" id="see-more">
+		<h2>template1.xml</h2>
 		<pre>
 			<code>&lt;tile></code>
 			<code>	&lt;visual lang="<span class="value">en-US</span>" version="<span class="value">2</span>"></code>
@@ -335,28 +379,6 @@
 
 	<section class="slide">
 		<pre>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="57x57" href="<span class="value">apple-touch-icon-57x57.png</span>"></code>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="60x60" href="<span class="value">apple-touch-icon-60x60.png</span>"></code>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="72x72" href="<span class="value">apple-touch-icon-72x72.png</span>"></code>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="76x76" href="<span class="value">apple-touch-icon-76x76.png</span>"></code>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="114x114" href="<span class="value">apple-touch-icon-114x114.png</span>"></code>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="120x120" href="<span class="value">apple-touch-icon-120x120.png</span>"></code>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="144x144" href="<span class="value">apple-touch-icon-144x144.png</span>"></code>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="152x152" href="<span class="value">apple-touch-icon-152x152.png</span>"></code>
-			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="180x180" href="<span class="value">apple-touch-icon-180x180.png</span>"></code>
-			<code class="next">&lt;link  rel = «apple-touch-icon-precomposed» sizes="180x180" href=" rel = «apple-touch-icon-precomposed».png"></code>
-		</pre>
-	</section>
-
-	<section class="slide">
-		<pre>
-			<code>&lt;meta name = "<span class="value">apple-mobile-web-app-title</span>" content = "<span class="value">AppTitle</span>"></code>
-			<code>&lt;meta name="<span class="value">apple-mobile-web-app-status-bar-style</span>" content="<span class="value">black</span>"></code>
-		</pre>
-	</section>
-
-	<section class="slide">
-		<pre>
 			<code>&lt;link rel="<span class="value">mask-icon</span>" href="safari-pinned-tab.svg" color="<span class="value">#00а0ff</span>"></code>
 		</pre>
 		<img src="pictures/1.png" alt="">
@@ -369,10 +391,33 @@
 	</section>
 
 	<section class="slide">
+		<pre>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="57x57" href="<span class="value">apple-touch-icon-57x57.png</span>"></code>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="60x60" href="<span class="value">apple-touch-icon-60x60.png</span>"></code>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="72x72" href="<span class="value">apple-touch-icon-72x72.png</span>"></code>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="76x76" href="<span class="value">apple-touch-icon-76x76.png</span>"></code>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="114x114" href="<span class="value">apple-touch-icon-114x114.png</span>"></code>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="120x120" href="<span class="value">apple-touch-icon-120x120.png</span>"></code>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="144x144" href="<span class="value">apple-touch-icon-144x144.png</span>"></code>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="152x152" href="<span class="value">apple-touch-icon-152x152.png</span>"></code>
+			<code>&lt;link rel="<span class="value">apple-touch-icon</span>" sizes="180x180" href="<span class="value">apple-touch-icon-180x180.png</span>"></code>
+			<code class="next">&lt;link rel="<span class="value">apple-touch-icon-precomposed</span>" sizes="<span class="value">180x180</span>" href="<span class="value">apple-touch-icon-precomposed.png</span>"></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>&lt;meta name = "<span class="value">apple-mobile-web-app-title</span>" content = "<span class="value">AppTitle</span>"></code>
+			<code>&lt;meta name="<span class="value">apple-mobile-web-app-status-bar-style</span>" content="<span class="value">black</span>"></code>
+		</pre>
+	</section>
+
+	<section class="slide">
 		<h2 class="shout shrink">Android</h2>
 	</section>
 
 	<section class="slide">
+		<h2>manifest.json</h2>
 		<pre class="json">
 			<code>{</code>
 			<code>	"name": <span class="value">"Rick and Morty"</span>,</code>
@@ -391,7 +436,7 @@
 			<code>	],</code>
 			<code>	"theme_color": <span class="value">"#b3adad"</span>,</code>
 			<code>	"background_color": <span class="value">"#b3adad"</span>,</code>
-			<code>	"display": <span class="value">"standalone"</code>
+			<code>	"display": <span class="value">"standalone</span>"</code>
 			<code>}</code>
 		</pre>
 
@@ -399,7 +444,18 @@
 			.json {
 				font-size: 18px;
 			}
+
+			.json code {
+				line-height: 1.3 !important;
+			}
 		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Вызов в &lt;head></h2>
+		<pre>
+			<code>&lt;link rel="<span class="value">manifest</span>" href="<span class="value">manifest.json</span>"></code>
+		</pre>
 	</section>
 
 	<section class="slide">
@@ -407,7 +463,11 @@
 	</section>
 
 	<section class="slide">
-		<h2>Напиши мне</h2>
+		<a href="http://realfavicongenerator.net/">http://realfavicongenerator.net/</a>
+	</section>
+
+	<section class="slide">
+		<h2>Вопросы?</h2>
 		<p>
 			<a href="http://olbolot.ru">olbolot.ru</a>
 		</p>
